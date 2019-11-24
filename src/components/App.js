@@ -1,11 +1,8 @@
-import React from 'react';
+import React from 'react'
+import Content from '../components/Main/Content/index'
 
 function App() {
-  return (
-    <div >
-      adsdf
-    </div>
-  );
+  return <Content />
 }
 
-export default App;
+export default App
