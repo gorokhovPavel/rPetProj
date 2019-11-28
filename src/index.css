@@ -5,3 +5,9 @@ body {
 .absolute {
   width : 100%;
 }
+.left{
+  text-align: left;
+}
+.right{
+  text-align: right;
+}
