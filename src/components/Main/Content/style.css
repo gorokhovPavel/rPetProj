@@ -1,5 +1,7 @@
 .content {
-    background: #0088fd;
-    min-height : 100px;
-    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+    margin: 0 100px;
+    padding : 20px;
+    height : 80vh;
 }
