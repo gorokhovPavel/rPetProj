@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
-import './index.css'
+import React from 'react'
+import './style.css'
 
-export default class Content extends Component {
-    render(){
-        return <div class='content' >content</div>
-    }
+function Content() {
+    return <div class='content' >content</div>
 }
+
+export default Content
