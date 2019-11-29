@@ -1,7 +1,65 @@
 .content {
+    border: 1px solid #000;
     background-color: #fff;
     text-align: center;
     margin: 0 100px;
     padding : 20px;
     height : 80vh;
+    font-family: Courier;
+}
+.content > #headInContent {
+    text-align: left;
+}
+#headInContent {
+    text-indent: 35px;
+    --margin: 0 0 0 35px;
+    text-transform: uppercase;
+    --word-spacing: -2px;
+    text-shadow: 2px 2px 4px #999;
+    line-height: 150%;
+}
+#buttForm {
+    margin : 0 0 0 35px;
+}
+#formContent p:hover {
+    cursor: pointer;
+    background-color: #999;
+}
+#formContent p:nth-child(odd) {
+    cursor: pointer;
+    background-color: rgba(28, 68, 99, .1);
+}
+#formContent input[type="password"]:invalid {
+    border : 2px #f00 solid;
+}
+#formContent input[type="password"]:valid {
+    border : 1px #0f0 solid;
+}
+#tableContent {
+    border: 1px solid #ccc;  /* граница всей таблицы */
+    border-spacing: 3px;
+    width : 350px;
+    table-layout : fixed;
+}
+#tableContent td, th {
+    border: solid 1px #ccc;
+}
+#tableContent thead:hover,tr:hover {
+    background-color: #999;
+}
+#tableContent tr:nth-child(odd) {
+    cursor: pointer;
+    background-color: rgba(11, 33, 20, .1);
+}
+.collapsed {
+    border-collapse: collapse;
+}
+.separated {
+    border-collapse: separate;
+}
+.hiddEmpCells {
+    empty-cells : show;
+}
+.captBott {
+    caption-side : top;
 }
