@@ -6,8 +6,8 @@ body {
   width : 100%;
 }
 .left{
-  text-align: left;
+  float : left;
 }
 .right{
-  text-align: right;
+  float : right;
 }
