@@ -7,12 +7,19 @@ export default class Footer extends Component {
     const { footerObj } = props
     this.state = footerObj
   }
+
+  setName(inName) {
+    this.setState({ name: inName })
+  }
+
   render() {
     return (
       <>
-        <div></div>
         <div className="footerDiv">
           <span className="left">{this.state.date}</span>
+          <button className="center" onClick={() => this.setName('vasya')}>
+            change
+          </button>
           <span className="right">{this.state.name}</span>
         </div>
       </>
