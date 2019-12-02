@@ -1,65 +1,103 @@
-.content {
-    border: 1px solid #000;
-    background-color: #fff;
-    text-align: center;
-    margin: 0 100px;
-    padding : 20px;
-    height : 80vh;
-    font-family: Courier;
+* {
+    box-sizing: border-box;
 }
-.content > #headInContent {
-    text-align: left;
+#header {
+    background-color: #f4f4f4;
 }
-#headInContent {
-    text-indent: 35px;
-    --margin: 0 0 0 35px;
+#header h1 {
+    font-size: 24px;
     text-transform: uppercase;
-    --word-spacing: -2px;
-    text-shadow: 2px 2px 4px #999;
-    line-height: 150%;
+    font-weight: bold;
+    padding: 30px 30px 30px 10px;
+    clear: both;
 }
-#buttForm {
-    margin : 0 0 0 35px;
+#nav {
+    background-color: #eee;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
-#formContent p:hover {
-    cursor: pointer;
-    background-color: #999;
+#nav li {
+    float: left;
+    list-style: none;   
 }
-#formContent p:nth-child(odd) {
-    cursor: pointer;
-    background-color: rgba(28, 68, 99, .1);
+#nav a {
+    display: block;
+    color: black;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-right: 1px solid #ccc;
 }
-#formContent input[type="password"]:invalid {
-    border : 2px #f00 solid;
+#nav li:last-child a {
+    border-right: none; 
 }
-#formContent input[type="password"]:valid {
-    border : 1px #0f0 solid;
+#nav a:hover {
+    font-weight: bold;
 }
-#tableContent {
-    border: 1px solid #ccc;  /* граница всей таблицы */
-    border-spacing: 3px;
-    width : 350px;
-    table-layout : fixed;
+#nav:after {
+    content : "";
+    display : table;
+    clear : both;
 }
-#tableContent td, th {
-    border: solid 1px #ccc;
+.wrapper {
+    background-color : #f7f7f7;
 }
-#tableContent thead:hover,tr:hover {
-    background-color: #999;
+.aside h2 {
+    font-size: 0.95em;
+    margin-top: 15px;
 }
-#tableContent tr:nth-child(odd) {
-    cursor: pointer;
-    background-color: rgba(11, 33, 20, .1);
+.aside h3 {
+    font-size: 0.85em;
+    margin-top: 10px;
 }
-.collapsed {
-    border-collapse: collapse;
+.aside p, .aside li {
+    font-size: .75em;
+    margin-top: 10px;   
 }
-.separated {
-    border-collapse: separate;
+.aside li{ 
+    list-style-type: none;
 }
-.hiddEmpCells {
-    empty-cells : show;
+#sidebar1 {
+    float: left;
+    width: 20%; 
+    padding: 0 10px 0 20px;
 }
-.captBott {
-    caption-side : top;
+#sidebar2 {
+    float: right;
+    width: 20%; 
+    padding: 0 20px 0 10px;
+}
+#article {
+    background-color: #fafafa;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 15px;
+    width: 60%;
+}
+#article :after {
+    clear : both;
+    display : table;
+    content : '';
+}
+#article h2 {
+    font-size : 1.3em;
+    margin-bottom : 15px;
+}
+#article p {
+    line-height : 150%;
+    margin-bottom : 15px;
+}
+#footer { 
+    border-top : 1px solid #ccc;
+    font-size : .8em;    
+    text-align : center;
+    padding : 10px 10px 30px 10px;
+}
+#nav ul, #header h1, .wrapper, #footer p {
+    max-width : 1200px;
+    margin : 0 auto; 
+}
+.wrapper, #nav, #header, #footer {
+    min-width : 768px;
 }
