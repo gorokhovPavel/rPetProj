@@ -10,7 +10,7 @@ function AddForm({ allCities, loading, setFilterCities }) {
     allCities.length > 0 ? allCities.map(item => item.name) : []
   const setClick = () => {
     const foundCity = allCities.find(item => item.name === selectedCiti)
-    setFilterCities(foundCity)
+    setFilterCities(foundCity, false)
   }
   const finalForm = !loading && (
     <div className="inlineBox">

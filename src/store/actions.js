@@ -5,6 +5,7 @@ import {
   LOAD_ALL_CITIES,
   SET_MIN_DEGREE,
   ADD_CITY_FILTER,
+  REMOVE_CITY_FILTER,
 } from '../store/constants'
 
 export const loadAllCities = () => async dispatch => {
@@ -18,12 +19,22 @@ export const loadAllCities = () => async dispatch => {
   }
 }
 
-export const setFilterCities = filterCity => (dispatch, getState) => {
+export const setFilterCities = (filterCity, isDelete) => (
+  dispatch,
+  getState
+) => {
   const { filters } = getState()
   const { cityFilter } = filters
   const idCityFilter = filterCity.id
-  if (cityFilter.indexOf(idCityFilter) === -1) {
-    dispatch({ type: ADD_CITY_FILTER, payload: idCityFilter })
+  const index = cityFilter.indexOf(idCityFilter)
+  if (!isDelete) {
+    if (index === -1) {
+      dispatch({ type: ADD_CITY_FILTER, payload: idCityFilter })
+    }
+  } else {
+    if (index !== -1) {
+      dispatch({ type: REMOVE_CITY_FILTER, payload: idCityFilter })
+    }
   }
 }
 
