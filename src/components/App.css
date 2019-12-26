@@ -1,0 +1,43 @@
+* {
+    box-sizing : border-box;
+}
+body {
+    padding : 0 15px;
+    margin : 0;
+    color : #95A5A6;
+    font-family : verdana, arial, sans-serif;
+    background-color : #fafafa;
+    display : flex;
+    flex-direction : column;
+}
+header {
+    height : 10vh;
+    border-bottom : 1.5px solid #ccc;
+}
+footer {
+    border-top : 1px solid #ccc;
+    height : 9vh;
+}
+main {
+    padding : 1em;
+    min-height : 81vh;
+    margin : 0 180px;
+}
+.point {
+    cursor : pointer;
+}
+.midVertical {
+    vertical-align : middle;
+}
+.inlineBox {
+    display : inline-block;
+}
+.borderBox {
+    border: 1px solid #ccc;
+} 
+.rightBox {
+    float : right;
+}
+.leftBox {
+    float : left;
+}

@@ -1,0 +1,41 @@
+.sizeCardItem {
+    padding : 10px;
+    margin : 10px;
+    width  : 200px;
+    height : 175px;
+}
+.colorCardItem {
+    background-color : #fff;
+}
+.cityName {
+    font-size : 15px;
+}
+.closeImg {
+    width : 20px;
+    height : 20px;
+}
+.closeImg:hover {
+    transition-duration : 0.3s;
+    transform : rotate(90deg); /* Для нормального браузера */
+    -ms-transform : rotate(90deg); /* Для НЕ нормального браузера :) */
+    -moz-transform : rotate(90deg); /* Для Firefox */
+    -webkit-transform : rotate(90deg); /* Для Safari, iOS */
+    -o-transform : rotate(90deg); /* Для Opera */
+}
+.mainWeather{
+    margin-top : 5px;
+}
+.weatherImg {
+    margin-right : 10px;
+    width : 55px;
+    height : 50px;
+}
+.degreeText {
+    font-size : 25px;
+}
+.addWeather {
+    padding : 0;
+}
+.addWeather p {
+    margin-bottom: 0; 
+}
