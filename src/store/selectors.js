@@ -9,6 +9,7 @@ export const citiesLoading = state =>
 export const allCitiesSelector = createSelector(citiesSelector, cities =>
   cities.valueSeq().toArray()
 )
+
 export const filtratedCitiesSelector = createSelector(
   citiesSelector,
   filtersSelector,
@@ -16,5 +17,9 @@ export const filtratedCitiesSelector = createSelector(
     cities
       .valueSeq()
       .toArray()
-      .filter(item => item.degree >= filters.degreeFilter)
+      .filter(
+        item =>
+          item.degree >= filters.degreeFilter ||
+          filters.cityFilter.indexOf(item.id) !== -1
+      )
 )
