@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { AutoComplete, Button } from 'antd'
-import { allCitiesSelector, citiesLoading } from '../../store/selectors'
+import { allCitiesSelector } from '../../store/selectors'
 import { setFilterCities } from '../../store/actions'
+import { arrayOf, object, func } from 'prop-types'
 
-function AddForm({ allCities, loading, setFilterCities }) {
+import './style.css'
+
+function AddForm({ allCities, setFilterCities }) {
   const [selectedCiti, setSelectCity] = useState('')
   const allNamesOfCities =
     allCities.length > 0 ? allCities.map(item => item.name) : []
@@ -12,24 +15,29 @@ function AddForm({ allCities, loading, setFilterCities }) {
     const foundCity = allCities.find(item => item.name === selectedCiti)
     setFilterCities(foundCity, false)
   }
-  const finalForm = !loading && (
-    <div className="inlineBox">
+  return (
+    <div className="flexContainer addCard">
       <AutoComplete
+        className="search"
         onSelect={setSelectCity}
         onChange={setSelectCity}
         dataSource={allNamesOfCities}
       />
-      <Button disabled={!selectedCiti} onClick={setClick}>
+      <Button className="" disabled={!selectedCiti} onClick={setClick}>
         +
       </Button>
     </div>
   )
-  return <>{finalForm}</>
 }
+
+AddForm.propTypes = {
+  allCities: arrayOf(object),
+  setFilterCities: func,
+}
+
 export default connect(
   state => ({
     allCities: allCitiesSelector(state),
-    loading: citiesLoading(state),
   }),
   {
     setFilterCities,

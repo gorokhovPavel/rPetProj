@@ -17,9 +17,9 @@ export const filtratedCitiesSelector = createSelector(
     cities
       .valueSeq()
       .toArray()
-      .filter(
-        item =>
-          item.degree >= filters.degreeFilter ||
-          filters.cityFilter.indexOf(item.id) !== -1
+      .filter(item =>
+        filters.cityFilter.length === 0
+          ? item.degree >= filters.degreeFilter
+          : filters.cityFilter.indexOf(item.id) !== -1
       )
 )

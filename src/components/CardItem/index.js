@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { func, number, string, shape } from 'prop-types'
 import { setFilterCities } from '../../store/actions'
 import './style.css'
 
@@ -37,6 +38,17 @@ function CardItem({ cityWeather, setFilterCities }) {
       </div>
     </div>
   )
+}
+
+CardItem.propTypes = {
+  cityWeather: shape({
+    name: string,
+    wind: number,
+    pressure: number,
+    degree: number,
+    typeWeather: number,
+  }).isRequired,
+  setFilterCities: func.isRequired,
 }
 
 export default connect(

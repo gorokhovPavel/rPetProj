@@ -1,0 +1,36 @@
+main {
+    padding : 1em;
+    min-height : 81vh;
+    margin : 0 1em;
+}
+.flexContainer {
+    display : flex;
+    flex-direction : column;
+}
+.sizeCardItem {
+    padding : 1em;
+    margin : .5em;
+    width  : 80vw;
+    height : 13em;
+}
+.addCard {
+    padding: 0;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        margin : 0 10em;
+    }
+    .flexContainer {
+        flex-direction : row;
+    }
+    .sizeCardItem {
+        padding : 1em;
+        margin : .5em;
+        width  : 15em;
+        height : 13em;
+    }
+    .addCard {
+        padding: 2em 1em 0 .5em;
+    }
+}

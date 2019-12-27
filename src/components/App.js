@@ -3,6 +3,7 @@ import Content from './Content/index'
 
 import 'antd/dist/antd.css'
 import './App.css'
+import './adaptive.css'
 
 function App() {
   return (
